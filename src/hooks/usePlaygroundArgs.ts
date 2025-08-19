@@ -1,4 +1,4 @@
-import { useAddonState, useParameter } from "@storybook/manager-api";
+import { useAddonState, useParameter } from "storybook/manager-api";
 import { useCallback } from "react";
 import { PlaygroundArgs, PlaygroundState, PlaygroundParameters } from "@/types";
 import {

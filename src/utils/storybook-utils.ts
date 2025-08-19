@@ -1,4 +1,4 @@
-import { HashEntry } from "@storybook/manager-api";
+import { HashEntry } from "storybook/manager-api";
 
 export function getStoryId(resolvedEntry: HashEntry): string {
   if (!resolvedEntry) {

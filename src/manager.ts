@@ -1,5 +1,5 @@
-import { addons } from "@storybook/manager-api";
-import { Addon_TypesEnum } from "@storybook/types";
+import { addons } from "storybook/manager-api";
+import { Addon_TypesEnum } from "storybook/internal/types";
 import { Tool, Panel, PanelTitle } from "@/components/Addons";
 import {
   ADDON_ID,

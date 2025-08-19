@@ -4,7 +4,7 @@ import {
   ReactCodeMirrorRef,
   BasicSetupOptions,
 } from "@uiw/react-codemirror";
-import { Loader } from "@storybook/components";
+import { Loader } from "storybook/internal/components";
 const CodeMirror = lazy(() => import("@uiw/react-codemirror"));
 import "./Editor.module.css";
 import { EditorInitialState, EditorTheme } from "@/types";

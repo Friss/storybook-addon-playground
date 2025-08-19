@@ -6,7 +6,7 @@ import {
   usePlaygroundArgs,
 } from "@/hooks";
 import EditorToolbarButton from "./EditorToolbarButton";
-import { useAddonState, useParameter } from "@storybook/manager-api";
+import { useAddonState, useParameter } from "storybook/manager-api";
 import {
   ADDON_ID_FOR_PARAMETERS,
   DEFAULT_ADDON_PARAMETERS,

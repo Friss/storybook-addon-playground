@@ -1,7 +1,7 @@
 import React, { memo, useCallback } from "react";
-import { useStorybookApi } from "@storybook/manager-api";
-import { IconButton } from "@storybook/components";
-import { Addon_RenderOptions } from "@storybook/types";
+import { useStorybookApi } from "storybook/manager-api";
+import { IconButton } from "storybook/internal/components";
+import { Addon_RenderOptions } from "storybook/internal/types";
 import styles from "./Tool.module.css";
 import { usePlaygroundState } from "@/hooks";
 import { Beaker } from "@/icons";

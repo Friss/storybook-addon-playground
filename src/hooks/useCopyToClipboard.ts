@@ -1,6 +1,6 @@
 import { useCallback, useMemo, useState } from "react";
 import { Code, PlaygroundState } from "@/types";
-import { useAddonState } from "@storybook/manager-api";
+import { useAddonState } from "storybook/manager-api";
 import { DEFAULT_ADDON_STATE, PANEL_ID } from "@/consts";
 
 const useCopyToClipboard = (code: Code) => {

@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { useAddonState } from "@storybook/manager-api";
+import { useAddonState } from "storybook/manager-api";
 import { PlaygroundState } from "@/types";
 import { saveCodeToStorage } from "@/utils";
 import { DEFAULT_ADDON_STATE, PANEL_ID } from "@/consts";

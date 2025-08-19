@@ -1,5 +1,5 @@
 import React, { memo } from "react";
-import { IconButton } from "@storybook/components";
+import { IconButton } from "storybook/internal/components";
 import cx from "classnames";
 import styles from "./EditorToolbarButton.module.css";
 

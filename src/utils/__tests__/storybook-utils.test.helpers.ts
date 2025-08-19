@@ -1,4 +1,4 @@
-import { ComponentEntry, StoryEntry } from "@storybook/manager-api";
+import { ComponentEntry, StoryEntry } from "storybook/manager-api";
 
 export const componentEntry: ComponentEntry = {
   type: "component",

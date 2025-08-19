@@ -1,6 +1,6 @@
 import { useCallback, useEffect } from "react";
 import usePlaygroundState from "./usePlaygroundState";
-import { useStorybookApi } from "@storybook/manager-api";
+import { useStorybookApi } from "storybook/manager-api";
 import { PANEL_ID } from "@/consts";
 
 const useAutoOpenPlayground = () => {

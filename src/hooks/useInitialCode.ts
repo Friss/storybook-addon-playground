@@ -3,7 +3,7 @@ import {
   useAddonState,
   useParameter,
   useStorybookApi,
-} from "@storybook/manager-api";
+} from "storybook/manager-api";
 import {
   ADDON_ID_FOR_PARAMETERS,
   DEFAULT_ADDON_PARAMETERS,

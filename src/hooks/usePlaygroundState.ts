@@ -2,7 +2,7 @@ import {
   useParameter,
   useStorybookApi,
   useStorybookState,
-} from "@storybook/manager-api";
+} from "storybook/manager-api";
 import { hrefTo } from "@storybook/addon-links";
 import { useMemo } from "react";
 import { ADDON_ID_FOR_PARAMETERS, DEFAULT_ADDON_PARAMETERS } from "@/consts";
@@ -29,7 +29,7 @@ const usePlaygroundState = () => {
     const resolved = resolveStory(storyId);
     if (!resolved) {
       throw new Error(
-        `[Playground Error]: Could not resolve playground story with id ${storyId}. 
+        `[Playground Error]: Could not resolve playground story with id ${storyId}.
         Make sure you passed storyId in your preview.ts file, and that a story file with that name exists.
         See example in docs for more info.`
       );

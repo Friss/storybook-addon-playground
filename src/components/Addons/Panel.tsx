@@ -8,10 +8,10 @@ import {
   usePlaygroundArgs,
   usePersistence,
 } from "@/hooks";
-import { AddonPanel } from "@storybook/components";
-import { Addon_RenderOptions } from "@storybook/types";
+import { AddonPanel } from "storybook/internal/components";
+import { Addon_RenderOptions } from "storybook/internal/types";
 import { Extension, keymap, ReactCodeMirrorRef } from "@uiw/react-codemirror";
-import { useAddonState, useParameter } from "@storybook/manager-api";
+import { useAddonState, useParameter } from "storybook/manager-api";
 import {
   ADDON_ID_FOR_PARAMETERS,
   DEFAULT_ADDON_PARAMETERS,

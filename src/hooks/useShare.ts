@@ -7,7 +7,7 @@ import {
   SNIPPET_SHARE_QUERY_ID,
 } from "@/consts";
 import usePlaygroundState from "./usePlaygroundState";
-import { useParameter } from "@storybook/manager-api";
+import { useParameter } from "storybook/manager-api";
 
 interface UseShareReturnType {
   onShare: () => Promise<void>;

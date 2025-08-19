@@ -1,5 +1,5 @@
 import { getStoryId } from "@/utils";
-import { HashEntry } from "@storybook/manager-api";
+import { HashEntry } from "storybook/manager-api";
 import { componentEntry, storyEntry } from "./storybook-utils.test.helpers";
 
 describe("id-utils", () => {

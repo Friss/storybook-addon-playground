@@ -5,7 +5,7 @@ import {
   PLAYGROUND_EDITOR_CHANGED,
   PLAYGROUND_STORY_PREPARED,
 } from "@/consts";
-import { useAddonState, useStorybookApi } from "@storybook/manager-api";
+import { useAddonState, useStorybookApi } from "storybook/manager-api";
 import usePlaygroundState from "./usePlaygroundState";
 import { PlaygroundState } from "@/types";
 

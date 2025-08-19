@@ -1,4 +1,4 @@
-import { useParameter, useStorybookState } from "@storybook/manager-api";
+import { useParameter, useStorybookState } from "storybook/manager-api";
 import { EditorTheme, PlaygroundParameters } from "@/types";
 import { ADDON_ID_FOR_PARAMETERS, DEFAULT_ADDON_PARAMETERS } from "@/consts";
 import { githubDark, githubLight } from "@uiw/codemirror-theme-github";

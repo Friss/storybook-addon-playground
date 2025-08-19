@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./EditorTab.module.css";
 import cx from "classnames";
-import { IconButton } from "@storybook/components";
+import { IconButton } from "storybook/internal/components";
 
 interface EditorTabProps {
   title: string;
