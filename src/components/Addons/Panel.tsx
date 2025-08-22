@@ -45,7 +45,10 @@ const Panel: React.FC<Addon_RenderOptions> = ({ active }) => {
       jsx: [
         playgroundAutocompletion(autocompletions),
         keymap.of(playgroundKeymaps),
-        langs.javascript({ jsx: true, typescript: true }),
+        langs.javascript(),
+        // langs.typescript(),
+        // langs.jsx(),
+        // langs.tsx(),
       ],
       css: [langs.css()],
     }),

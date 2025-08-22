@@ -21,7 +21,6 @@ const EditorToolbarButton: React.FC<EditorToolbarButtonProps> = ({
   onClick,
 }) => (
   <IconButton
-    placeholder={text}
     title={tooltip}
     onClick={onClick}
     disabled={disabled}

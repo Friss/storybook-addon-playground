@@ -1,5 +1,6 @@
 import React from "react";
-import { fireEvent, render } from "@testing-library/react";
+import { render } from "@/tests";
+import userEvent from "@testing-library/user-event";
 import EditorTabs from "../EditorTabs";
 
 describe("EditorTabs", () => {
@@ -15,12 +16,12 @@ describe("EditorTabs", () => {
     expect(getByText("JSX")).not.toHaveClass("selected");
   });
 
-  it('should call the "onTabChange" function when a tab is clicked', () => {
+  it('should call the "onTabChange" function when a tab is clicked', async () => {
     const onTabChangeMock = vi.fn();
     const { getByText } = render(
       <EditorTabs selectedTab="css" onTabChange={onTabChangeMock} />
     );
-    fireEvent.click(getByText("JSX"));
+    await userEvent.click(getByText("JSX"));
     expect(onTabChangeMock).toHaveBeenCalledOnce();
     expect(onTabChangeMock).toHaveBeenCalledWith("jsx");
   });

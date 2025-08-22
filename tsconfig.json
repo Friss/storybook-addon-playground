@@ -11,7 +11,8 @@
       "@/hooks": ["src/hooks"],
       "@/utils": ["src/utils"],
       "@/types": ["src/types"],
-      "@/decorators": ["src/decorators"]
+      "@/decorators": ["src/decorators"],
+      "@/tests": ["src/tests"]
     },
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
