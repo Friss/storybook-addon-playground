@@ -16,7 +16,7 @@ const EditorTab: React.FC<EditorTabProps> = ({
 }) => {
   return (
     <IconButton
-      placeholder={title}
+      title={title}
       onClick={() => !selected && onClick()}
       className={cx(styles.tab, { [styles.selected]: selected })}
     >

@@ -16,7 +16,6 @@ const Tool: React.FC<Addon_RenderOptions> = () => {
 
   return (
     <IconButton
-      placeholder="Show playground view"
       title="Show playground view"
       onClick={selectPlaygroundStory}
       className={styles.tool}

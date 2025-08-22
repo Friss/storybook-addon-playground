@@ -27,9 +27,11 @@ addons.register(ADDON_ID, ({ getCurrentParameter, on, emit, resolveStory }) => {
 
   addons.add(TOOL_ID, {
     type: Addon_TypesEnum.TOOLEXTRA,
-    title: "", // has no effect, but it is a must-have attr
-    match: (matchOptions) =>
-      !matchOptions?.storyId?.includes?.(getPlaygroundStoryId()),
+    title: "Playground",
+    match: (matchOptions) => {
+      return !matchOptions?.storyId?.includes?.(getPlaygroundStoryId());
+    },
+
     render: Tool,
   });
 
