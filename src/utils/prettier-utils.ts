@@ -1,31 +1,32 @@
 import { format, Options } from "prettier";
-import parserHtml from "prettier/parser-html";
-import parserTypeScript from "prettier/parser-typescript";
-import parserPostCss from "prettier/parser-postcss";
+import parserHtml from "prettier/plugins/html";
+import pluginEstree from "prettier/plugins/estree";
+import pluginTypescript from "prettier/plugins/typescript";
+import pluginPostcss from "prettier/plugins/postcss";
 
 const jsxOptions: Options = {
   parser: "typescript",
   arrowParens: "avoid",
   trailingComma: "es5",
-  plugins: [parserHtml, parserTypeScript],
+  plugins: [pluginEstree, parserHtml, pluginTypescript],
 };
 
 const cssOptions: Options = {
-  parser: "css",
-  plugins: [parserPostCss],
+  parser: "scss",
+  plugins: [pluginPostcss],
 };
 
-export function formatJsx(code: string): string {
+export async function formatJsx(code: string): Promise<string> {
   return formatCode(code, jsxOptions);
 }
 
-export function formatCss(code: string): string {
+export async function formatCss(code: string): Promise<string> {
   return formatCode(code, cssOptions);
 }
 
-function formatCode(code: string, options: Options): string {
+async function formatCode(code: string, options: Options): Promise<string> {
   try {
-    return format(code, options).replace(/;\s*$/, "");
+    return (await format(code, options)).replace(/;\s*$/, "");
   } catch (e) {
     throw new Error(`[Playground Error]: Error formatting code: ${e}`);
   }

@@ -21,7 +21,7 @@ const useToolbarActions = (
   const onFormatCode = useCallback(async () => {
     try {
       const formatter = formatFunctions[currentTab];
-      const formatted = formatter?.(code[currentTab]);
+      const formatted = await formatter?.(code[currentTab]);
       if (formatted === code[currentTab]) {
         return;
       }
