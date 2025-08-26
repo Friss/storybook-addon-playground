@@ -44,14 +44,14 @@ On your `.storybook/preview.ts` file, you should add something similar to the fo
 import MyComponentsLibrary from "my-components-library";
 import MyIconsLibrary from "my-icons-library";
 import reactDocgenOutput from "./react-docgen-output.json";
-import { generateAutocompletions } from "storybook-addon-playground";
+import { generateAutocompletion } from "storybook-addon-playground";
 
 const preview = {
   parameters: {
     playground: {
       storyId: "playground",
       components: { ...MyComponentsLibrary, ...MyIconsLibrary },
-      autocompletions: generateAutocompletions(reactDocgenOutput),
+      autocompletions: generateAutocompletion(reactDocgenOutput),
       editorTheme: "light",
       introCode: { jsx: `<div>Welcome to my Playground!</div>`, css: "" },
     },
