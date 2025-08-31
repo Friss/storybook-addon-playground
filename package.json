@@ -75,12 +75,13 @@
     "@storybook/addon-docs": "^9.0.0",
     "@storybook/react-vite": "^9.0.0",
     "@svgr/cli": "^8.1.0",
+    "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.4.6",
-    "@testing-library/react": "^12.1.5",
+    "@testing-library/react": "^16.0.1",
     "@types/node": "^22.14.0",
     "@types/prettier": "^2.7.3",
-    "@types/react": "^16.14.60",
-    "@types/react-dom": "^16.9.24",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
     "@typescript-eslint/eslint-plugin": "^6.13.2",
     "@typescript-eslint/parser": "^6.13.2",
     "@vibe/core": "^3.62.0",
@@ -93,9 +94,9 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "jsdom": "^24.1.0",
     "postcss": "^8.4.39",
-    "react": "^16.14.0",
+    "react": "^18.3.1",
     "react-docgen": "^7.0.3",
-    "react-dom": "^16.14.0",
+    "react-dom": "^18.3.1",
     "rollup": "^4.19.0",
     "rollup-plugin-postcss": "^4.0.2",
     "rollup-plugin-typescript2": "^0.36.0",
@@ -108,7 +109,7 @@
     "vitest": "^2.0.3"
   },
   "peerDependencies": {
-    "react": ">=16.9.0",
-    "react-dom": ">=16.9.0"
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0"
   }
 }
