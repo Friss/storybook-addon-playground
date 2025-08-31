@@ -1,6 +1,5 @@
 import React, { SVGProps } from "react";
-import { render, within } from "@/tests";
-import userEvent from "@testing-library/user-event";
+import { fireEvent, render, within } from "@/tests";
 import EditorToolbarButton from "../EditorToolbarButton";
 const IconMock: React.FC<SVGProps<SVGSVGElement>> = () => <span>Icon</span>;
 
@@ -29,17 +28,17 @@ describe("EditorToolbarButton", () => {
     expect(button).toBeDisabled();
   });
 
-  it('should call the "onClick" function when a button is clicked', async () => {
+  it('should call the "onClick" function when a button is clicked', () => {
     const onClickMock = vi.fn();
     const { getByRole } = render(
       <EditorToolbarButton renderIcon={IconMock} onClick={onClickMock} />
     );
     const button = getByRole("button");
-    await userEvent.click(button);
+    fireEvent.click(button);
     expect(onClickMock).toHaveBeenCalledOnce();
   });
 
-  it('should not call the "onClick" function when a button is disabled and clicked', async () => {
+  it('should not call the "onClick" function when a button is disabled and clicked', () => {
     const onClickMock = vi.fn();
     const { getByRole } = render(
       <EditorToolbarButton
@@ -49,7 +48,7 @@ describe("EditorToolbarButton", () => {
       />
     );
     const button = getByRole("button");
-    await userEvent.click(button);
+    fireEvent.click(button);
     expect(onClickMock).not.toHaveBeenCalled();
   });
 });

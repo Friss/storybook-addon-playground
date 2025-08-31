@@ -1,6 +1,5 @@
 import React from "react";
-import { render } from "@/tests";
-import userEvent from "@testing-library/user-event";
+import { fireEvent, render } from "@/tests";
 import EditorTab from "../EditorTab";
 
 describe("EditorTab", () => {
@@ -16,21 +15,21 @@ describe("EditorTab", () => {
     expect(getByText(title)).toHaveClass("selected");
   });
 
-  it("should call onClick when tab is clicked", async () => {
+  it("should call onClick when tab is clicked", () => {
     const onClickMock = vi.fn();
     const { getByText } = render(
       <EditorTab title={title} onClick={onClickMock} />
     );
-    await userEvent.click(getByText(title));
+    fireEvent.click(getByText(title));
     expect(onClickMock).toHaveBeenCalledOnce();
   });
 
-  it("should not call onClick when tab is clicked and already selected", async () => {
+  it("should not call onClick when tab is clicked and already selected", () => {
     const onClickMock = vi.fn();
     const { getByText } = render(
       <EditorTab title={title} selected onClick={onClickMock} />
     );
-    await userEvent.click(getByText(title));
+    fireEvent.click(getByText(title));
     expect(onClickMock).not.toHaveBeenCalled();
   });
 });
